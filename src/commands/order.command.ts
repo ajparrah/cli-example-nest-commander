@@ -1,9 +1,9 @@
 import { Command, CommandRunner } from 'nest-commander';
-import { ReprocessCommand } from '@sub-commands';
+import { ReprocessOrderCommand } from '@sub-commands/order';
 
 @Command({
   name: 'order',
-  subCommands: [ReprocessCommand],
+  subCommands: [ReprocessOrderCommand],
 })
 export class OrderCommand extends CommandRunner {
   async run(inputs: string[], options: Record<string, any>): Promise<void> {

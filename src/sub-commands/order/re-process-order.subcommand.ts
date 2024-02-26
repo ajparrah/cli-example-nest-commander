@@ -1,5 +1,5 @@
 import { ReProcessOptions } from '@interfaces/options/sub-commands';
-import { OrderService } from '../services/order.service';
+import { OrderService } from '../../services/order.service';
 import { CommandRunner, Option, SubCommand } from 'nest-commander';
 import { isValidOrderId } from '@utils';
 
@@ -8,7 +8,7 @@ import { isValidOrderId } from '@utils';
   aliases: ['rp', 'reprocess'],
   description: 'Reprocesa una orden',
 })
-export class ReprocessCommand extends CommandRunner {
+export class ReprocessOrderCommand extends CommandRunner {
   constructor(private readonly orderService: OrderService) {
     super();
     console.log('ReprocessCommand', orderService);
