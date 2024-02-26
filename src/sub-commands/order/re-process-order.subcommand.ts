@@ -6,7 +6,7 @@ import { isValidOrderId } from '@utils';
 @SubCommand({
   name: 're-process',
   aliases: ['rp', 'reprocess'],
-  description: 'Reprocesa una orden',
+  description: 're process an order',
 })
 export class ReprocessOrderCommand extends CommandRunner {
   constructor(private readonly orderService: OrderService) {

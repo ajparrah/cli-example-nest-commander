@@ -3,6 +3,7 @@ import { ReprocessOrderCommand } from '@sub-commands/order';
 
 @Command({
   name: 'order',
+  description: 'handle orders',
   subCommands: [ReprocessOrderCommand],
 })
 export class OrderCommand extends CommandRunner {
