@@ -11,7 +11,6 @@ import { isValidOrderId } from '@utils';
 export class ReprocessOrderCommand extends CommandRunner {
   constructor(private readonly orderService: OrderService) {
     super();
-    console.log('ReprocessCommand', orderService);
   }
 
   @Option({
