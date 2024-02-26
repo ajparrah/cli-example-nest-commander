@@ -1,10 +1,13 @@
 import { AppModule } from './app.module';
 import { CommandFactory } from 'nest-commander';
+import { name, version } from '../package.json';
+import { errorHandlerUtil } from '@utils';
 
 async function bootstrap() {
-  console.log('Running the app');
   await CommandFactory.run(AppModule, {
-    errorHandler: (error) => console.error('Error', error),
+    cliName: name,
+    version,
+    errorHandler: errorHandlerUtil,
   });
 }
 bootstrap();
