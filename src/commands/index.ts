@@ -1,2 +1,2 @@
-export * from './setup.command';
+export * from './profile.command';
 export * from './order.command';
